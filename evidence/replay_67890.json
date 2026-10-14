@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2026-10-14T15:08:50.295500+00:00",
+    "type": "replay_started",
+    "capability_id": "bank_customer_lookup",
+    "capability_version": 1,
+    "customer_id": "67890",
+    "simulate_failure": false
+  },
+  {
+    "timestamp": "2026-10-14T15:08:53.475164+00:00",
+    "type": "replay_failed",
+    "error_type": "Error",
+    "error_message": "Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8000/\nCall log:\n  - navigating to \"http://127.0.0.1:8000/\", waiting until \"domcontentloaded\"\n"
+  }
+]

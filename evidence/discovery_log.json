@@ -1,0 +1,42 @@
+[
+  {
+    "step": 1,
+    "timestamp": "2026-10-14T15:00:05.251820+00:00",
+    "url": "http://127.0.0.1:8000/",
+    "observation": "BankOps - Customer Lookup\nCustomer ID  Search Customer",
+    "current_input": "",
+    "decision": {
+      "action": "fill",
+      "label": "Customer ID",
+      "value": "12345"
+    }
+  },
+  {
+    "step": 2,
+    "timestamp": "2026-10-14T15:00:07.296911+00:00",
+    "url": "http://127.0.0.1:8000/",
+    "observation": "BankOps - Customer Lookup\nCustomer ID  Search Customer",
+    "current_input": "12345",
+    "decision": {
+      "action": "click",
+      "text": "Search Customer"
+    }
+  },
+  {
+    "step": 3,
+    "timestamp": "2026-10-14T15:00:09.137743+00:00",
+    "url": "http://127.0.0.1:8000/customer?customer_id=12345",
+    "observation": "Customer Details\n\nCustomer ID: 12345\n\nName: Alex Morgan\n\nAccount Type: Savings\n\nBalance: $8,450.00\n\nStatus: Active\n\nBack to Search",
+    "current_input": "No customer ID input on this page",
+    "decision": {
+      "action": "finish",
+      "result": "Customer balance is $8,450.00"
+    }
+  },
+  {
+    "type": "capability_generated",
+    "path": "capabilities\\customer_lookup_v1.json",
+    "capability_id": "bank_customer_lookup",
+    "version": 1
+  }
+]

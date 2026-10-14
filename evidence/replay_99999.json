@@ -1,0 +1,60 @@
+[
+  {
+    "timestamp": "2026-10-14T15:02:02.730309+00:00",
+    "type": "replay_started",
+    "capability_id": "bank_customer_lookup",
+    "capability_version": 1,
+    "customer_id": "99999",
+    "simulate_failure": false
+  },
+  {
+    "timestamp": "2026-10-14T15:02:05.544504+00:00",
+    "type": "step_started",
+    "step_id": "enter_customer_id",
+    "action": "fill"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:07.102221+00:00",
+    "type": "step_completed",
+    "step_id": "enter_customer_id",
+    "checkpoint": "input_filled",
+    "url": "http://127.0.0.1:8000/"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:07.102221+00:00",
+    "type": "step_started",
+    "step_id": "search_customer",
+    "action": "click"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:08.661883+00:00",
+    "type": "step_completed",
+    "step_id": "search_customer",
+    "checkpoint": "navigation_completed",
+    "url": "http://127.0.0.1:8000/customer?customer_id=99999"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:08.661883+00:00",
+    "type": "step_started",
+    "step_id": "read_customer_details",
+    "action": "extract"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:08.683316+00:00",
+    "type": "step_completed",
+    "step_id": "read_customer_details",
+    "checkpoint": "customer_details_visible",
+    "url": "http://127.0.0.1:8000/customer?customer_id=99999"
+  },
+  {
+    "timestamp": "2026-10-14T15:02:08.684313+00:00",
+    "type": "replay_completed",
+    "result": {
+      "outcome": "customer_not_found",
+      "customer_id": "99999",
+      "customer_name": null,
+      "balance": null
+    },
+    "handoff_count": 0
+  }
+]

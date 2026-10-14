@@ -1,0 +1,8 @@
+[
+  {
+    "timestamp": "2026-10-14T15:02:55.343143+00:00",
+    "type": "replay_failed",
+    "error_type": "ValueError",
+    "error_message": "Customer ID must contain exactly five digits"
+  }
+]

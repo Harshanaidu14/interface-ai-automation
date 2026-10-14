@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "capability_id": "bank_customer_lookup",
+  "version": 1,
+  "description": "Find a banking customer by ID and retrieve account information",
+  "base_url": "http://127.0.0.1:8000",
+  "inputs": {
+    "customer_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "customer_name": {
+      "type": "string"
+    },
+    "balance": {
+      "type": "string"
+    }
+  },
+  "steps": [
+    {
+      "id": "enter_customer_id",
+      "action": "fill",
+      "target": {
+        "strategy": "role",
+        "role": "textbox",
+        "name": "Customer ID"
+      },
+      "value": "{{customer_id}}",
+      "checkpoint": "input_filled"
+    },
+    {
+      "id": "search_customer",
+      "action": "click",
+      "target": {
+        "strategy": "role",
+        "role": "button",
+        "name": "Search Customer"
+      },
+      "checkpoint": "navigation_completed"
+    },
+    {
+      "id": "read_customer_details",
+      "action": "extract",
+      "fields": [
+        "customer_name",
+        "balance"
+      ],
+      "checkpoint": "customer_details_visible"
+    }
+  ]
+}
